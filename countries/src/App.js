@@ -36,15 +36,33 @@ class App extends Component {
     // console.log(this.state.countries);
     return (
       <div >
-        <div className='header'>
+            <header class="header">
+                  <div class="logo-box">
+                      {/* <img src="./img/slogo.png" alt="logo" class="logo"/> */}
+                  </div>
+       
+                  <div class="text-box">
+                    <h1 class="heading-primary">
+                          <span class="heading-primary-main">Single Page app</span>
+                          <span class="heading-primary-sub">App That performs CRUD</span>
+                    </h1>
+
+                        <a href="#form" class="btn btn-white btn-animated" >Add country now</a>
+
+                  </div>   
+                 
+            </header>
+          
+
+        {/* <div className='header'>
         <div className='text'>
         <div>
         <h1>creating a Single Page </h1>
-        <span> Application That performs CRUD (Create, Read, Update, Delete) operations on a locally hosted API, Countries.</span>
+        <span> </span>
         </div>
-        <button  className='btn-header'>Add country now</button>
+        <button  className='btn-header btn-animated btn'>Add country now</button>
         </div>       
-        </div>
+        </div> */}
     
         <CountriesList countries={this.state.countries} />
         <Form />

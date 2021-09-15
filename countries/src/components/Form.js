@@ -28,55 +28,55 @@ function Form() {
       axios.post('http://localhost:3333/countries',form).
       then(res => {
         console.log(res);
+        
         setForm(initialState)
       })
     }
     return (
       <div className='form-component'>
       {/* Build your form here */}
-      <div className='container form-box'>
+            <div className='container form-box'>
 
-      <div className='form-bg'>
-      <form  onSubmit={handleSubmit}>
+              <div className='form-bg'>
+                  <form  onSubmit={handleSubmit} id='form'>
+                      <label htmlFor='label'>
+                          Name 
+                          <input 
+                          type='text' 
+                          name='name'
+                          placeholder='Enter the country Name'
+                          value={form.name}
+                          onChange={handleChange}
+                          />
+                      </label>
 
-        <label htmlFor='label'>
-          Name 
-          <input 
-          type='text' 
-          name='name'
-          placeholder='Enter the country Name'
-          value={form.name}
-          onChange={handleChange}
-          />
-        </label>
+                      <label htmlFor='label'>
+                          Population
+                          <input 
+                          type='number' 
+                          name='population'
+                          placeholder='Enter the country Population'
+                          value={form.population}
+                          onChange={handleChange}
+                          />
+                      </label>
 
-        <label htmlFor='label'>
-          Population
-          <input 
-          type='number' 
-          name='population'
-          placeholder='Enter the country Population'
-          value={form.population}
-          onChange={handleChange}
-          />
-        </label>
-        <label htmlFor='label'>
-          Land_area
-          <input 
-          type='number' 
-          name='land_area'
-          placeholder='Enter the country Land_area'
-          value={form.land_area}
-          onChange={handleChange}
-          />
-        </label>
+                      <label htmlFor='label'>
+                          Land_area
+                          <input 
+                          type='number' 
+                          name='land_area'
+                          placeholder='Enter the country Land_area'
+                          value={form.land_area}
+                          onChange={handleChange}
+                        />
+                      </label>
 
-        <button className='submit'>Submit</button>
-
-      </form>
-      </div>
-      </div>
-      </div>
+                      <button class="btn btn-gradient btn-animated">submit</button>
+                  </form>
+                </div>
+              </div>
+              </div>
     );
 
 }
